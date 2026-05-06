@@ -1,11 +1,49 @@
+# Python
 .venv/
+venv/
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Jupyter
 .ipynb_checkpoints/
 
+# Local environment and secrets
+.env
+.env.*
+configs/*.session
+configs/*.session-journal
+configs/telegram_downloader.session*
+
+# Project data and generated artifacts
 data/
 models/
+outputs/
+logs/
 
-.env
+# TGStat / Playwright runtime artifacts
+data/cache/
+data/debug/
+data/playwright_profile/
+data/clean/*.csv
+data/clean/*.parquet
+data/posts_to_check/*.csv
+
+# Large tabular/raw files, wherever they appear
+*.parquet
+*.xlsx
+*.xls
+*.jsonl
+
+# Logs
+*.log
+logs/*.csv
+
+# OS/editor files
 .DS_Store
 Thumbs.db
+desktop.ini
+.vscode/
