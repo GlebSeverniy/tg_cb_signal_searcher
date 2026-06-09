@@ -6,7 +6,7 @@ from pathlib import Path
 import pandas as pd
 
 
-RAW_DIR = Path("data/raw/telegram_json")
+RAW_DIR = Path("data/raw/telegram_json/new")
 OUTPUT_DIR = Path("data/clean")
 OUTPUT_FILE = OUTPUT_DIR / "extracted_messages.parquet"
 LOG_FILE = Path("logs/extract_log.csv")
@@ -236,6 +236,7 @@ def build_row(message: dict, channel_info: dict, file_path: Path):
         "reactions": json_or_empty(reactions),
         "views": get_message_value(message, "views"),
         "forwards": get_message_value(message, "forwards"),
+        "replies": get_message_value(message, "replies"),
         "has_media": int(
             any(
                 get_message_value(message, key)
