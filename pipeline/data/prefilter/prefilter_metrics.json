@@ -1,0 +1,75 @@
+{
+  "input": "C:\\Users\\elist\\ВУзик\\Курсасч\\Классификатор ЦБ\\bert_corpus_v3_revised_t1t4\\corpus_test.parquet",
+  "output": "C:\\Users\\elist\\ВУзик\\Курсасч\\Классификатор ЦБ\\bert_corpus_v3_revised_t1t4\\data\\prefilter\\bert_candidates.parquet",
+  "work_dir": "C:\\Users\\elist\\ВУзик\\Курсасч\\Классификатор ЦБ\\bert_corpus_v3_revised_t1t4\\data\\prefilter\\work",
+  "rows_input_total": 13234,
+  "rows_after_message_filter": 13234,
+  "rows_after_text_filter": 13234,
+  "unique_texts_total": 13137,
+  "unique_texts_too_short": 1,
+  "selected_by_topics": 3417,
+  "selected_by_nbp": 90,
+  "selected_by_econom": 2264,
+  "selected_by_union": 4280,
+  "candidates_total": 4280,
+  "share_selected": 0.32340940003022517,
+  "duplicates_removed": 0,
+  "models": {
+    "topics_svc": "classifiers\\topics\\binary_per_topic_classifier\\results\\svc_per_topic_pipeline.joblib",
+    "nbp_stacker": "classifiers\\topics\\svc_focused_v2\\results\\nbp_v3\\nbp_stacker.joblib",
+    "econom_tfidf": "classifiers\\econom\\models\\class_model\\tfidf.pkl",
+    "econom_xgboost": "classifiers\\econom\\models\\class_model\\xgboost_6classes.pkl"
+  },
+  "environments": {
+    "topics_python": "C:\\Users\\elist\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "econom_python": "C:\\Users\\elist\\ВУзик\\Курсасч\\Классификатор ЦБ\\bert_corpus_v3_revised_t1t4\\.venv-econom312\\Scripts\\python.exe"
+  },
+  "bert_input_schema": {
+    "dropped_label_columns": [
+      "relevant",
+      "t1_relevant",
+      "t2_relevant",
+      "t3_relevant",
+      "t4_relevant",
+      "t5_relevant",
+      "annotated",
+      "reasoning",
+      "source"
+    ],
+    "input_text_col": "text",
+    "text_col": "text",
+    "is_bert_ready": true,
+    "contains_label_columns": false,
+    "bert_config": {
+      "config_path": "model\\topic_model_config (1).json",
+      "text_col": "text",
+      "max_length": 512,
+      "labels": [
+        "t1_relevant",
+        "t2_relevant",
+        "t3_relevant",
+        "t4_relevant",
+        "t5_relevant"
+      ],
+      "thresholds": {
+        "t1_relevant": 0.8,
+        "t2_relevant": 0.35,
+        "t3_relevant": 0.75,
+        "t4_relevant": 0.8,
+        "t5_relevant": 0.95
+      }
+    }
+  },
+  "label_sanity_check": {
+    "has_bert_labels": true,
+    "bert_relevant_total": 685,
+    "bert_relevant_selected": 663,
+    "bert_relevant_missed": 22,
+    "prefilter_recall_on_labeled_test": 0.9678832116788321,
+    "bert_relevant_selected_share": 0.15490654205607476,
+    "annotated_total": 5684,
+    "annotated_relevant_total": 685,
+    "annotated_relevant_selected": 663,
+    "prefilter_recall_on_annotated_relevant": 0.9678832116788321
+  }
+}

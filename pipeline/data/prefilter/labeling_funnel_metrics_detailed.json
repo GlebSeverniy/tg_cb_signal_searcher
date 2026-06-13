@@ -1,0 +1,22 @@
+{
+  "total_posts": 13234,
+  "svc_topic_columns": [
+    "topic_Защита_прав_потребителей",
+    "topic_ДКП",
+    "topic_Финансовый_рынок",
+    "topic_Финтех",
+    "topic_Геополитика",
+    "topic_НДО"
+  ],
+  "nbp_topic_column": "topic_НБП",
+  "step1_svc_topics_selected": 3361,
+  "step2_nbp_catboost_stack_selected_total": 90,
+  "step2_nbp_catboost_stack_new_only": 56,
+  "after_svc_plus_nbp": 3417,
+  "step3_econom_selected_total": 2264,
+  "step3_econom_new_only": 863,
+  "selected_for_bert_total": 4280,
+  "left_without_any_prefilter_label": 8954,
+  "overlap_svc_nbp": 34,
+  "overlap_topics_econom": 1401
+}

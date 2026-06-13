@@ -1,0 +1,15 @@
+{
+  "cut_off_posts_total": 8954,
+  "cut_off_with_relevant_1": 22,
+  "cut_off_with_any_t1_t5_relevant": 22,
+  "cut_off_with_any_manual_relevance": 22,
+  "cut_off_irrelevant_by_manual_labels": 8932,
+  "by_label_column": {
+    "relevant": 22,
+    "t1_relevant": 3,
+    "t2_relevant": 4,
+    "t3_relevant": 9,
+    "t4_relevant": 6,
+    "t5_relevant": 4
+  }
+}

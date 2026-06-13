@@ -1,0 +1,38 @@
+{
+  "model_name": "ai-forever/ruBert-base",
+  "model_size": "base",
+  "task": "binary_topic_direction_classification",
+  "input_format": "[TOPIC=t_i] text",
+  "data_input_mode": "presplit_train_test",
+  "train_path": "/content/drive/MyDrive/Colab Notebooks/direction_train.parquet",
+  "test_path": "/content/drive/MyDrive/Colab Notebooks/direction_test.parquet",
+  "text_col": "model_text",
+  "source_text_col": "text",
+  "topic_col": "topic",
+  "label_col": "direction",
+  "label2id": {
+    "-": 0,
+    "+": 1
+  },
+  "id2label": {
+    "0": "-",
+    "1": "+"
+  },
+  "max_length": 512,
+  "topics": [
+    "t1",
+    "t2",
+    "t3",
+    "t4",
+    "t5"
+  ],
+  "class_weight_mode": "balanced",
+  "class_weight_cap": 10.0,
+  "metric_for_best_model": "macro_f1",
+  "valid_size_from_train": 0.15,
+  "use_existing_split_column": false,
+  "random_state": 42,
+  "epochs": 4,
+  "learning_rate": 2e-05,
+  "weight_decay": 0.01
+}

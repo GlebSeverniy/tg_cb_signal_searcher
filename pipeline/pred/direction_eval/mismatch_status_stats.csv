@@ -1,0 +1,5 @@
+﻿comparison_status,count,rate_of_gold_pairs
+match,455,0.5346650998824912
+missing_prediction_for_gold_pair,313,0.36780258519388953
+wrong_direction,83,0.09753231492361927
+extra_prediction_without_gold_pair,67,0.07873090481786134

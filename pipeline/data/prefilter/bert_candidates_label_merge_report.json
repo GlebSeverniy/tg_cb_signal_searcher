@@ -1,0 +1,32 @@
+{
+  "candidates_path": "C:\\Users\\elist\\ВУзик\\Курсасч\\Классификатор ЦБ\\bert_corpus_v3_revised_t1t4\\data\\prefilter\\bert_candidates.parquet",
+  "source_labels_path": "C:\\Users\\elist\\ВУзик\\Курсасч\\Классификатор ЦБ\\bert_corpus_v3_revised_t1t4\\corpus_test.parquet",
+  "match_keys": [
+    "channel_id",
+    "message_id"
+  ],
+  "rows_before": 4280,
+  "rows_after": 4280,
+  "matched_rows": 4280,
+  "unmatched_rows": 0,
+  "unmatched_key_examples": [],
+  "added_label_columns": [
+    "relevant",
+    "t1_relevant",
+    "t2_relevant",
+    "t3_relevant",
+    "t4_relevant",
+    "t5_relevant",
+    "annotated",
+    "reasoning",
+    "source"
+  ],
+  "relevant_count_in_candidates": 663,
+  "topic_positive_counts": {
+    "t1_relevant": 239,
+    "t2_relevant": 96,
+    "t3_relevant": 251,
+    "t4_relevant": 123,
+    "t5_relevant": 142
+  }
+}

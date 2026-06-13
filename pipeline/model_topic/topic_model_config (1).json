@@ -1,0 +1,31 @@
+{
+  "model_name": "ai-forever/ruBert-base",
+  "model_size": "base",
+  "task": "multi_label_topic_classification",
+  "labels": [
+    "t1_relevant",
+    "t2_relevant",
+    "t3_relevant",
+    "t4_relevant",
+    "t5_relevant"
+  ],
+  "text_col": "text",
+  "max_length": 512,
+  "thresholds": {
+    "t1_relevant": 0.8,
+    "t2_relevant": 0.35,
+    "t3_relevant": 0.75,
+    "t4_relevant": 0.8,
+    "t5_relevant": 0.95
+  },
+  "data_mode": "weak_negatives",
+  "weak_negative_weight": 0.2,
+  "pos_weight_mode": "sqrt",
+  "pos_weight_cap": 15.0,
+  "metric_for_best_model": "macro_pr_auc",
+  "train_path": "/kaggle/input/datasets/tarasovd/annotated-corpus/corpus_train.parquet",
+  "test_path": "/kaggle/input/datasets/tarasovd/annotated-corpus/corpus_test.parquet",
+  "val_size": 0.15,
+  "random_state": 42,
+  "notes": "Prefilter classifiers were used before corpus construction; for future posts they can be used as a cheap preprocessor before BERT inference."
+}

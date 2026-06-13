@@ -1,6 +1,7 @@
 # Python
 .venv/
 venv/
+pipeline/.venv-econom312/
 __pycache__/
 *.py[cod]
 *$py.class
@@ -19,10 +20,22 @@ configs/*.session-journal
 configs/telegram_downloader.session*
 
 # Project data and generated artifacts
-data/
-models/
-outputs/
-logs/
+data/*
+!data/README.md
+models/*
+!models/README.md
+outputs/*
+!outputs/README.md
+logs/*
+!logs/README.md
+
+# Local model checkpoints and binary artifacts
+pipeline/model_direction/*.safetensors
+pipeline/model_direction/*.bin
+pipeline/model_direction/*.zip
+pipeline/model_topic/*.safetensors
+pipeline/model_topic/*.bin
+pipeline/model_topic/*.zip
 
 # TGStat / Playwright runtime artifacts
 data/cache/
@@ -44,6 +57,7 @@ logs/*.csv
 
 # OS/editor files
 .DS_Store
+__MACOSX/
 Thumbs.db
 desktop.ini
 .vscode/

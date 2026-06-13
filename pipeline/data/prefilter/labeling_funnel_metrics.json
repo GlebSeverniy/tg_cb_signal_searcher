@@ -1,0 +1,17 @@
+{
+  "total_posts": 13234,
+  "added_by_all_topics_step": 3417,
+  "of_them_nbp_topic": 90,
+  "added_by_econom_step_new_only": 863,
+  "selected_for_bert_total": 4280,
+  "left_without_any_prefilter_label": 8954,
+  "topics_and_econom_overlap": 1401,
+  "topics_only": 2016,
+  "econom_only": 863,
+  "sequential_funnel": {
+    "start_empty": 0,
+    "after_topics": 3417,
+    "after_econom_new_only": 4280,
+    "remaining_not_selected": 8954
+  }
+}

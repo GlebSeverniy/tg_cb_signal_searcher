@@ -1,0 +1,479 @@
+{
+  "paths": {
+    "gold": "pred\\annotated_direct_revised (2).parquet",
+    "predictions": "pred\\bert_candidates_topic_predictions_optimum_with_direction_predictions.parquet",
+    "output_dir": "pred\\direction_eval"
+  },
+  "post_counts": {
+    "gold_rows_raw": 5257,
+    "pred_rows_raw": 663,
+    "gold_duplicate_post_uid_rows": 0,
+    "pred_duplicate_post_uid_rows": 0,
+    "gold_unique_posts": 5257,
+    "pred_unique_posts": 663,
+    "overlap_posts_used_for_metrics": 663,
+    "gold_posts_absent_from_predictions_excluded_from_metrics": 4594,
+    "pred_posts_absent_from_gold": 0
+  },
+  "pair_counts": {
+    "gold_direction_pairs_on_overlap_posts": 851,
+    "pred_direction_pairs_on_overlap_posts": 605,
+    "covered_gold_pairs_with_prediction": 538,
+    "correct_direction_pairs": 455,
+    "wrong_direction_pairs": 83,
+    "missing_predictions_for_gold_pairs": 313,
+    "extra_predictions_without_gold_pair": 67,
+    "coverage_rate_gold_pairs": 0.6321974148061105,
+    "accuracy_on_all_gold_pairs_missing_is_wrong": 0.5346650998824912,
+    "accuracy_on_covered_pairs_only": 0.845724907063197
+  },
+  "covered_pairs_direction_metrics": {
+    "accuracy": 0.845724907063197,
+    "micro_precision": 0.845724907063197,
+    "micro_recall": 0.845724907063197,
+    "micro_f1": 0.845724907063197,
+    "macro_precision": 0.8308334420242598,
+    "macro_recall": 0.8157747311744292,
+    "macro_f1": 0.8223921024266265,
+    "weighted_precision": 0.8435975549147775,
+    "weighted_recall": 0.845724907063197,
+    "weighted_f1": 0.843930075937307
+  },
+  "strict_gold_pair_metrics_missing_is_wrong": {
+    "accuracy": 0.5346650998824912,
+    "micro_precision": 0.845724907063197,
+    "micro_recall": 0.5346650998824912,
+    "micro_f1": 0.6551475881929446,
+    "macro_precision": 0.8308334420242598,
+    "macro_recall": 0.5108670979457497,
+    "macro_f1": 0.6239930955120829,
+    "weighted_precision": 0.8370648422735005,
+    "weighted_recall": 0.5346650998824912,
+    "weighted_f1": 0.6442457867884395
+  },
+  "output_files": {
+    "all_pair_comparison": {
+      "csv": "pred\\direction_eval\\all_pair_comparison.csv",
+      "parquet": "pred\\direction_eval\\all_pair_comparison.parquet",
+      "rows": 918
+    },
+    "all_mismatches": {
+      "csv": "pred\\direction_eval\\all_mismatches.csv",
+      "parquet": "pred\\direction_eval\\all_mismatches.parquet",
+      "rows": 463
+    },
+    "wrong_direction": {
+      "csv": "pred\\direction_eval\\mismatches_wrong_direction.csv",
+      "parquet": "pred\\direction_eval\\mismatches_wrong_direction.parquet",
+      "rows": 83
+    },
+    "missing_predictions_for_gold_pairs": {
+      "csv": "pred\\direction_eval\\mismatches_missing_predictions_for_gold_pairs.csv",
+      "parquet": "pred\\direction_eval\\mismatches_missing_predictions_for_gold_pairs.parquet",
+      "rows": 313
+    },
+    "extra_predictions_without_gold_pair": {
+      "csv": "pred\\direction_eval\\mismatches_extra_predictions_without_gold_pair.csv",
+      "parquet": "pred\\direction_eval\\mismatches_extra_predictions_without_gold_pair.parquet",
+      "rows": 67
+    },
+    "gold_posts_absent_from_predictions": {
+      "csv": "pred\\direction_eval\\gold_posts_absent_from_predictions_excluded_from_metrics.csv",
+      "parquet": "pred\\direction_eval\\gold_posts_absent_from_predictions_excluded_from_metrics.parquet",
+      "rows": 4594
+    },
+    "pred_posts_absent_from_gold": {
+      "csv": "pred\\direction_eval\\pred_posts_absent_from_gold.csv",
+      "parquet": "pred\\direction_eval\\pred_posts_absent_from_gold.parquet",
+      "rows": 0
+    }
+  },
+  "status_stats": [
+    {
+      "comparison_status": "match",
+      "count": 455,
+      "rate_of_gold_pairs": 0.5346650998824912
+    },
+    {
+      "comparison_status": "missing_prediction_for_gold_pair",
+      "count": 313,
+      "rate_of_gold_pairs": 0.36780258519388953
+    },
+    {
+      "comparison_status": "wrong_direction",
+      "count": 83,
+      "rate_of_gold_pairs": 0.09753231492361927
+    },
+    {
+      "comparison_status": "extra_prediction_without_gold_pair",
+      "count": 67,
+      "rate_of_gold_pairs": 0.07873090481786134
+    }
+  ],
+  "topic_status_stats": [
+    {
+      "topic": "t1",
+      "comparison_status": "extra_prediction_without_gold_pair",
+      "count": 17,
+      "gold_pairs_in_topic": 239,
+      "rate_of_gold_pairs_in_topic": 0.07112970711297072
+    },
+    {
+      "topic": "t1",
+      "comparison_status": "match",
+      "count": 174,
+      "gold_pairs_in_topic": 239,
+      "rate_of_gold_pairs_in_topic": 0.7280334728033473
+    },
+    {
+      "topic": "t1",
+      "comparison_status": "missing_prediction_for_gold_pair",
+      "count": 28,
+      "gold_pairs_in_topic": 239,
+      "rate_of_gold_pairs_in_topic": 0.11715481171548117
+    },
+    {
+      "topic": "t1",
+      "comparison_status": "wrong_direction",
+      "count": 37,
+      "gold_pairs_in_topic": 239,
+      "rate_of_gold_pairs_in_topic": 0.15481171548117154
+    },
+    {
+      "topic": "t2",
+      "comparison_status": "extra_prediction_without_gold_pair",
+      "count": 16,
+      "gold_pairs_in_topic": 96,
+      "rate_of_gold_pairs_in_topic": 0.16666666666666666
+    },
+    {
+      "topic": "t2",
+      "comparison_status": "match",
+      "count": 37,
+      "gold_pairs_in_topic": 96,
+      "rate_of_gold_pairs_in_topic": 0.3854166666666667
+    },
+    {
+      "topic": "t2",
+      "comparison_status": "missing_prediction_for_gold_pair",
+      "count": 52,
+      "gold_pairs_in_topic": 96,
+      "rate_of_gold_pairs_in_topic": 0.5416666666666666
+    },
+    {
+      "topic": "t2",
+      "comparison_status": "wrong_direction",
+      "count": 7,
+      "gold_pairs_in_topic": 96,
+      "rate_of_gold_pairs_in_topic": 0.07291666666666667
+    },
+    {
+      "topic": "t3",
+      "comparison_status": "extra_prediction_without_gold_pair",
+      "count": 7,
+      "gold_pairs_in_topic": 251,
+      "rate_of_gold_pairs_in_topic": 0.027888446215139442
+    },
+    {
+      "topic": "t3",
+      "comparison_status": "match",
+      "count": 94,
+      "gold_pairs_in_topic": 251,
+      "rate_of_gold_pairs_in_topic": 0.3745019920318725
+    },
+    {
+      "topic": "t3",
+      "comparison_status": "missing_prediction_for_gold_pair",
+      "count": 148,
+      "gold_pairs_in_topic": 251,
+      "rate_of_gold_pairs_in_topic": 0.5896414342629482
+    },
+    {
+      "topic": "t3",
+      "comparison_status": "wrong_direction",
+      "count": 9,
+      "gold_pairs_in_topic": 251,
+      "rate_of_gold_pairs_in_topic": 0.035856573705179286
+    },
+    {
+      "topic": "t4",
+      "comparison_status": "extra_prediction_without_gold_pair",
+      "count": 17,
+      "gold_pairs_in_topic": 123,
+      "rate_of_gold_pairs_in_topic": 0.13821138211382114
+    },
+    {
+      "topic": "t4",
+      "comparison_status": "match",
+      "count": 55,
+      "gold_pairs_in_topic": 123,
+      "rate_of_gold_pairs_in_topic": 0.44715447154471544
+    },
+    {
+      "topic": "t4",
+      "comparison_status": "missing_prediction_for_gold_pair",
+      "count": 62,
+      "gold_pairs_in_topic": 123,
+      "rate_of_gold_pairs_in_topic": 0.5040650406504065
+    },
+    {
+      "topic": "t4",
+      "comparison_status": "wrong_direction",
+      "count": 6,
+      "gold_pairs_in_topic": 123,
+      "rate_of_gold_pairs_in_topic": 0.04878048780487805
+    },
+    {
+      "topic": "t5",
+      "comparison_status": "extra_prediction_without_gold_pair",
+      "count": 10,
+      "gold_pairs_in_topic": 142,
+      "rate_of_gold_pairs_in_topic": 0.07042253521126761
+    },
+    {
+      "topic": "t5",
+      "comparison_status": "match",
+      "count": 95,
+      "gold_pairs_in_topic": 142,
+      "rate_of_gold_pairs_in_topic": 0.6690140845070423
+    },
+    {
+      "topic": "t5",
+      "comparison_status": "missing_prediction_for_gold_pair",
+      "count": 23,
+      "gold_pairs_in_topic": 142,
+      "rate_of_gold_pairs_in_topic": 0.1619718309859155
+    },
+    {
+      "topic": "t5",
+      "comparison_status": "wrong_direction",
+      "count": 24,
+      "gold_pairs_in_topic": 142,
+      "rate_of_gold_pairs_in_topic": 0.16901408450704225
+    }
+  ],
+  "covered_per_topic_metrics": [
+    {
+      "topic": "t1",
+      "n": 211,
+      "accuracy": 0.8246445497630331,
+      "micro_precision": 0.8246445497630331,
+      "micro_recall": 0.8246445497630331,
+      "micro_f1": 0.8246445497630331,
+      "macro_precision": 0.7861552028218695,
+      "macro_recall": 0.7559725039441063,
+      "macro_f1": 0.7683726450081589,
+      "weighted_precision": 0.8185135033476266,
+      "weighted_recall": 0.8246445497630331,
+      "weighted_f1": 0.8197748656977074,
+      "precision_-": 0.7142857142857143,
+      "recall_-": 0.603448275862069,
+      "f1_-": 0.6542056074766355,
+      "support_-": 58,
+      "precision_+": 0.8580246913580247,
+      "recall_+": 0.9084967320261438,
+      "f1_+": 0.8825396825396825,
+      "support_+": 153
+    },
+    {
+      "topic": "t2",
+      "n": 44,
+      "accuracy": 0.8409090909090909,
+      "micro_precision": 0.8409090909090909,
+      "micro_recall": 0.8409090909090909,
+      "micro_f1": 0.8409090909090909,
+      "macro_precision": 0.803030303030303,
+      "macro_recall": 0.7864583333333333,
+      "macro_f1": 0.7939799331103679,
+      "weighted_precision": 0.8374655647382919,
+      "weighted_recall": 0.8409090909090909,
+      "weighted_f1": 0.8386743691091517,
+      "precision_-": 0.7272727272727273,
+      "recall_-": 0.6666666666666666,
+      "f1_-": 0.6956521739130435,
+      "support_-": 12,
+      "precision_+": 0.8787878787878788,
+      "recall_+": 0.90625,
+      "f1_+": 0.8923076923076924,
+      "support_+": 32
+    },
+    {
+      "topic": "t3",
+      "n": 103,
+      "accuracy": 0.912621359223301,
+      "micro_precision": 0.912621359223301,
+      "micro_recall": 0.912621359223301,
+      "micro_f1": 0.912621359223301,
+      "macro_precision": 0.9127717391304347,
+      "macro_recall": 0.8616666666666667,
+      "macro_f1": 0.8827324478178368,
+      "weighted_precision": 0.912647741663149,
+      "weighted_recall": 0.912621359223301,
+      "weighted_f1": 0.909747425434314,
+      "precision_-": 0.9130434782608695,
+      "recall_-": 0.75,
+      "f1_-": 0.8235294117647058,
+      "support_-": 28,
+      "precision_+": 0.9125,
+      "recall_+": 0.9733333333333334,
+      "f1_+": 0.9419354838709677,
+      "support_+": 75
+    },
+    {
+      "topic": "t4",
+      "n": 61,
+      "accuracy": 0.9016393442622951,
+      "micro_precision": 0.9016393442622951,
+      "micro_recall": 0.9016393442622951,
+      "micro_f1": 0.9016393442622951,
+      "macro_precision": 0.925,
+      "macro_recall": 0.8888888888888888,
+      "macro_f1": 0.8969594594594594,
+      "weighted_precision": 0.9163934426229507,
+      "weighted_recall": 0.9016393442622951,
+      "weighted_f1": 0.8994793974302171,
+      "precision_-": 0.85,
+      "recall_-": 1.0,
+      "f1_-": 0.918918918918919,
+      "support_-": 34,
+      "precision_+": 1.0,
+      "recall_+": 0.7777777777777778,
+      "f1_+": 0.875,
+      "support_+": 27
+    },
+    {
+      "topic": "t5",
+      "n": 119,
+      "accuracy": 0.7983193277310925,
+      "micro_precision": 0.7983193277310925,
+      "micro_recall": 0.7983193277310925,
+      "micro_f1": 0.7983193277310925,
+      "macro_precision": 0.7940900562851783,
+      "macro_recall": 0.7779255319148937,
+      "macro_f1": 0.7836363636363637,
+      "weighted_precision": 0.7969476721270122,
+      "weighted_recall": 0.7983193277310925,
+      "weighted_f1": 0.7954774637127577,
+      "precision_-": 0.7804878048780488,
+      "recall_-": 0.6808510638297872,
+      "f1_-": 0.7272727272727273,
+      "support_-": 47,
+      "precision_+": 0.8076923076923077,
+      "recall_+": 0.875,
+      "f1_+": 0.84,
+      "support_+": 72
+    }
+  ],
+  "strict_per_topic_metrics": [
+    {
+      "topic": "t1",
+      "n": 239,
+      "accuracy": 0.7280334728033473,
+      "micro_precision": 0.8246445497630331,
+      "micro_recall": 0.7280334728033473,
+      "micro_f1": 0.7733333333333333,
+      "macro_precision": 0.7861552028218695,
+      "macro_recall": 0.6652637972926068,
+      "macro_f1": 0.7178918026016932,
+      "weighted_precision": 0.817729664312649,
+      "weighted_recall": 0.7280334728033473,
+      "weighted_f1": 0.7681703394538294,
+      "precision_-": 0.7142857142857143,
+      "recall_-": 0.5223880597014925,
+      "f1_-": 0.603448275862069,
+      "support_-": 67,
+      "precision_+": 0.8580246913580247,
+      "recall_+": 0.8081395348837209,
+      "f1_+": 0.8323353293413174,
+      "support_+": 172
+    },
+    {
+      "topic": "t2",
+      "n": 96,
+      "accuracy": 0.3854166666666667,
+      "micro_precision": 0.8409090909090909,
+      "micro_recall": 0.3854166666666667,
+      "micro_f1": 0.5285714285714286,
+      "macro_precision": 0.803030303030303,
+      "macro_recall": 0.35695006747638325,
+      "macro_f1": 0.4822222222222222,
+      "weighted_precision": 0.8172348484848485,
+      "weighted_recall": 0.3854166666666667,
+      "weighted_f1": 0.512638888888889,
+      "precision_-": 0.7272727272727273,
+      "recall_-": 0.20512820512820512,
+      "f1_-": 0.32,
+      "support_-": 39,
+      "precision_+": 0.8787878787878788,
+      "recall_+": 0.5087719298245614,
+      "f1_+": 0.6444444444444445,
+      "support_+": 57
+    },
+    {
+      "topic": "t3",
+      "n": 251,
+      "accuracy": 0.3745019920318725,
+      "micro_precision": 0.912621359223301,
+      "micro_recall": 0.3745019920318725,
+      "micro_f1": 0.5310734463276836,
+      "macro_precision": 0.9127717391304347,
+      "macro_recall": 0.35852862082212833,
+      "macro_f1": 0.4896902014867638,
+      "weighted_precision": 0.9127468387320283,
+      "weighted_recall": 0.3745019920318725,
+      "weighted_f1": 0.506470200465587,
+      "precision_-": 0.9130434782608695,
+      "recall_-": 0.18421052631578946,
+      "f1_-": 0.30656934306569344,
+      "support_-": 114,
+      "precision_+": 0.9125,
+      "recall_+": 0.5328467153284672,
+      "f1_+": 0.6728110599078341,
+      "support_+": 137
+    },
+    {
+      "topic": "t4",
+      "n": 123,
+      "accuracy": 0.44715447154471544,
+      "micro_precision": 0.9016393442622951,
+      "micro_recall": 0.44715447154471544,
+      "micro_f1": 0.5978260869565217,
+      "macro_precision": 0.925,
+      "macro_recall": 0.44135969664138675,
+      "macro_f1": 0.5939775391830187,
+      "weighted_precision": 0.9134146341463414,
+      "weighted_recall": 0.44715447154471544,
+      "weighted_f1": 0.5968561277615738,
+      "precision_-": 0.85,
+      "recall_-": 0.4788732394366197,
+      "f1_-": 0.6126126126126126,
+      "support_-": 71,
+      "precision_+": 1.0,
+      "recall_+": 0.40384615384615385,
+      "f1_+": 0.5753424657534246,
+      "support_+": 52
+    },
+    {
+      "topic": "t5",
+      "n": 142,
+      "accuracy": 0.6690140845070423,
+      "micro_precision": 0.7983193277310925,
+      "micro_recall": 0.6690140845070423,
+      "micro_f1": 0.7279693486590039,
+      "macro_precision": 0.7940900562851783,
+      "macro_recall": 0.6552447552447553,
+      "macro_f1": 0.708338405356056,
+      "weighted_precision": 0.7952395423195836,
+      "weighted_recall": 0.6690140845070423,
+      "weighted_f1": 0.7171748690560894,
+      "precision_-": 0.7804878048780488,
+      "recall_-": 0.49230769230769234,
+      "f1_-": 0.6037735849056604,
+      "support_-": 65,
+      "precision_+": 0.8076923076923077,
+      "recall_+": 0.8181818181818182,
+      "f1_+": 0.8129032258064516,
+      "support_+": 77
+    }
+  ]
+}
